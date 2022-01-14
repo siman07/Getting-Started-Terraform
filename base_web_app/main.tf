@@ -3,8 +3,8 @@
 ##################################################################################
 
 provider "aws" {
-  access_key = "AKIAQH2BJWG3GYK73Y7C"
-  secret_key = "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"
+  access_key = "ACCESS_KEY"
+  secret_key = "SECRET_KEY"
   region     = "us-east-1"
 }
 
@@ -54,7 +54,7 @@ resource "aws_route_table_association" "rta-subnet1" {
 }
 
 # SECURITY GROUPS #
-# Nginx security group 
+# Nginx security group
 resource "aws_security_group" "nginx-sg" {
   name   = "nginx_sg"
   vpc_id = aws_vpc.vpc.id
@@ -92,4 +92,3 @@ echo '<html><head><title>Taco Team Server</title></head><body style=\"background
 EOF
 
 }
-
